@@ -279,117 +279,19 @@ df3['B'].isnull()
 df3[df3['A'].isnull()] # A컬럼 중 nan이 값
 
 
-# In[122]:
-
 
 df_test = df[df > 0]
 
 
-# In[123]:
-
 
 df_test
 
-
-# In[135]:
 
 
 df_test.loc[df_test['A'].isnull(), 'A'] = 0  # A커럶의 nan값을 0으로 -> 행 선택 후 열 선택
 df_test
 
 
-# In[136]:
-
-
 df_test.notnull() # 값이 있는것만 true
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
 
 

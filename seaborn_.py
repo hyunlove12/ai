@@ -8,7 +8,7 @@
 # pip install seaborn
 import matplotlib.pyplot as plt # seaborn을 사용 할 때 matplotlib도 필수적으로 import
 import numpy as np
-import seaborn as sns 
+import seaborn_ as sns
 get_ipython().run_line_magic('matplotlib', 'inline')
 
 

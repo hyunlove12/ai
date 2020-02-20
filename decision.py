@@ -5,7 +5,7 @@
 
 
 # 필요 라이브러리 임포트
-from IPython.display import display
+# from IPython.display import display
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -100,8 +100,9 @@ plot_feature_importances_cancer(tree)
 
 cancer = load_breast_cancer()
 
-X_train, X_test, y_train, y_test = train_test_split(cancer.data, cancer.target, random_state=0)
 
+X_train, X_test, y_train, y_test = train_test_split(cancer.data, cancer.target, random_state=0)
+print(cancer.target)
 
 # In[26]:
 
