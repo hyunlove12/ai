@@ -19,13 +19,11 @@ def titanic():
     print(df.columns)
 
     mask = df.Fare < 1000
-    # df['male'] = df[1 if df.Sex == 'male' else 3]
-    # df['female'] = df[0 if df.Sex == 'female' else 3]
-   # print(df['male'])
 
     # 가족 유무에 대한 컬럼
     df = df[mask]  # 조건에 충족하는 값만 출력된다.
     df['fm'] = df.SibSp + df.Parch
+
     # 나이별로 구분
     # 결측치 0 혹은 평균 값
     # 평균 값 = df['Age'].mean()
@@ -39,6 +37,7 @@ def titanic():
     df['a6'] = False
     df['a7'] = False
     df['a8'] = False
+
 
     def func(data):
         print(data.Age, data.a0, data.a1)
@@ -73,24 +72,8 @@ def titanic():
 
 
 
-#    df['a0'] =  (df['Age'] >= 0.0 and df['Age'] < 10.0)
-#    df['a1'] = (df['Age'] >= 10.0 & df['Age'] < 20.0)
-#    df['a2'] = (df['Age'] >= 20.0 & df['Age'] < 20.0)
-#    df['a3'] = (df['Age'] >= 30.0 & df['Age'] < 20.0)
-#    df['a4'] = (df['Age'] >= 40.0 & df['Age'] < 20.0)
-#    df['a6'] = (df['Age'] >= 60.0 & df['Age'] < 20.0)
-#    df['a7'] = (df['Age'] >= 70.0 & df['Age'] < 20.0)
-#    df['a8'] = (df['Age'] >= 80.0 & df['Age'] < 20.0)
-
-
-
-
 
     df[['Age', 'a0', 'a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8']] = df[['Age', 'a0', 'a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8']].apply(func, axis=1)
-    # df['with_f'] = df.loc[df['fm'] == 0]
-    # df['a0'] = df['Age'] >= 0 and df['Age'] < 10
-    # print(df.loc[df['fm'] == 0])
-
 
     def func(data):
         if data >= 0.0 and data < 10.0:
@@ -200,17 +183,6 @@ def over_data():
     # 결측치 0 혹은 평균 값
     # 평균 값 = df['Age'].mean()
     df['Age'] = df['Age'].fillna(df['Age'].mean())
-    # df['Age'] = df['Age'].fillna(0)
-    # df['a0'] = False
-    # df['a1'] = False
-    # df['a2'] = False
-    # df['a3'] = False
-    # df['a4'] = False
-    # df['a5'] = False
-    # df['a6'] = False
-    # df['a7'] = False
-    # df['a8'] = False
-
     def func(data):
         print(data.Age, data.a0, data.a1)
         if data.Age >= 0.0 and data.Age < 10.0:
@@ -243,7 +215,6 @@ def over_data():
         return data
 
 
-    # df[['Age', 'a0', 'a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8']] = df[['Age', 'a0', 'a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8']].apply(func, axis=1)
 
 
     def func(data):
@@ -310,10 +281,6 @@ def ok_data():
     print(df.columns)
 
     mask = df.Fare < 1000
-    # df['male'] = df[1 if df.Sex == 'male' else 3]
-    # df['female'] = df[0 if df.Sex == 'female' else 3]
-   # print(df['male'])
-
     # 가족 유무에 대한 컬럼
     df = df[mask]  # 조건에 충족하는 값만 출력된다.
     df['fm'] = df.SibSp + df.Parch
@@ -599,16 +566,7 @@ def jy_():
     # X_train = pd.read_csv('./over_load.csv', index_col=False)
     y_train = pd.read_csv('./y_train.csv')
 
-    '''
-    A
-    B
-    C
-    D
-    E
-    F
-    G
-    T
-    '''
+    # Cabin의 키 값
     for name, group in X_train.groupby('Cabin'):
         #  list(df.groupby('Embarked'))
         # 키 값
